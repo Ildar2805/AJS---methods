@@ -1,17 +1,9 @@
 import Character from '../js/base';
 
-test('should check an Error of type', () => {
-  try {
-    const result = new Character('Nick', 'Iceman');
-  } catch (error) {
-    expect(error.message).toBe('Тип не соответствует критериям');
-  }
+test('проверка выбрасывания ошибки по типу', () => {
+  expect(() => new Character('Nick', 'Iceman')).toThrow();
 });
 
-test('should check an Error of name', () => {
-  try {
-    const result = new Character('N', 'Bowman');
-  } catch (error) {
-    expect(error.message).toBe('Имя не соответствует критериям');
-  }
+test('проверка выбрасывания ошибки по имени', () => {
+  expect(() => new Character('N', 'Bowman')).toThrow();
 });

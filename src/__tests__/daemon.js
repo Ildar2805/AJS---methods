@@ -1,6 +1,6 @@
 import Daemon from '../js/daemon';
 
-test('should check an object', () => {
+test('проверка создания объекта', () => {
   const result = new Daemon('Nick', 'Daemon');
   const expected = {
     name: 'Nick',

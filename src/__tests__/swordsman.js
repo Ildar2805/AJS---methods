@@ -1,6 +1,6 @@
 import Swordsman from '../js/swordsman';
 
-test('should check an object', () => {
+test('проверка создания объекта', () => {
   const result = new Swordsman('Nick', 'Swordsman');
   const expected = {
     name: 'Nick',

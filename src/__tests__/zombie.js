@@ -1,6 +1,6 @@
 import Zombie from '../js/zombie';
 
-test('should check an object', () => {
+test('проверка создания объекта', () => {
   const result = new Zombie('Nick', 'Zombie');
   const expected = {
     name: 'Nick',

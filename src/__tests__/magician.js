@@ -1,6 +1,6 @@
 import Magician from '../js/magician';
 
-test('should check an object', () => {
+test('проверка создания объекта', () => {
   const result = new Magician('Nick', 'Magician');
   const expected = {
     name: 'Nick',

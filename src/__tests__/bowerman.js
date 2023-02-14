@@ -1,6 +1,6 @@
 import Bowerman from '../js/bowerman';
 
-test('should check an object', () => {
+test('проверка создания объекта', () => {
   const result = new Bowerman('Nick', 'Bowman');
   const expected = {
     name: 'Nick',
@@ -13,7 +13,7 @@ test('should check an object', () => {
   expect(result).toEqual(expected);
 });
 
-test('should check levelUp method', () => {
+test('проверка метода levelUp', () => {
   const result = new Bowerman('Nick', 'Bowman');
   result.levelUp();
   const expected = {
@@ -27,7 +27,7 @@ test('should check levelUp method', () => {
   expect(result).toEqual(expected);
 });
 
-test('should check damage method', () => {
+test('проверка метода damage', () => {
   const result = new Bowerman('Nick', 'Bowman');
   result.damage(20);
   const expected = {
@@ -41,17 +41,15 @@ test('should check damage method', () => {
   expect(result).toEqual(expected);
 });
 
-test('should check levelUp method if character is dead', () => {
-  const result = new Bowerman('Nick', 'Bowman');
-  result.damage(200);
-  try {
+test('проверка метода levelUp, если персонаж мертв', () => {
+  expect(() => {
+    const result = new Bowerman('Nick', 'Bowman');
+    result.damage(200);
     result.levelUp();
-  } catch (error) {
-    expect(error.message).toBe('Персонаж мертв!');
-  }
+  }).toThrow();
 });
 
-test('should check damage method if character is dead', () => {
+test('проверка метода damage, если персонаж мертв', () => {
   const result = new Bowerman('Nick', 'Bowman');
   result.damage(200);
   result.damage(100);
